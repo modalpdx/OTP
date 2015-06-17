@@ -1,7 +1,7 @@
 # OTP
 School project that simulates a "One Time Pad" encryption client and server.
 
-How One Time Pad encryption works:
+##How One Time Pad encryption works:
 
 In a One Time Pad encryption exchange, the sender and receiver have
 identical pads containing pages filled with random letters. The sender
@@ -54,7 +54,7 @@ Example from Wikipedia that converts "EQNVZ" back to "HELLO":
        H       E       L       L       O  → message
 ```
 
-How these programs work:
+##How these programs work:
 
 There are 5 programs in the set:
 
@@ -78,13 +78,13 @@ the same key "page" and the encrypted message to the otp_dec_d server for
 decryption. The otp_dec_d server sends back the decrypted message which is
 then output to stdout (redirect to a file to capture the content).
 
-Build:
+##Build:
 
 Download everyting and run 'make'. Command line help is offered by running
 a program without passing any command line arguments (they all require
 arguments, even the two servers).
 
-Colophon:
+##Colophon:
 
 This suite of programs was written with standards in mind but was only
 developed and tested on Linux and Mac OS. Mostly Linux.
@@ -92,7 +92,7 @@ developed and tested on Linux and Mac OS. Mostly Linux.
 GNU Make and GCC are required. The programs are 100% C, no C++ or other C
 variants.
 
-Disclaimer:
+##Disclaimer:
 
 This is code from a school project. It satisfies assignment requirements
 but is nowhere near as "scrubbed" as a released software suite should be.
