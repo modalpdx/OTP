@@ -25,12 +25,14 @@ modulus is 4, the letter would be E, assuming we're starting at 0).
 Example from Wikipedia that converts "HELLO" into "EQNVZ" 
 (https://en.wikipedia.org/wiki/One-time_pad):
 
+```
       H       E       L       L       O  message
    7 (H)   4 (E)  11 (L)  11 (L)  14 (O) message
 + 23 (X)  12 (M)   2 (C)  10 (K)  11 (L) key
 = 30      16      13      21      25     message + key
 =  4 (E)  16 (Q)  13 (N)  21 (V)  25 (Z) message + key (mod 26)
       E       Q       N       V       Z  → ciphertext
+```
 
 Decryption is almost the reverse of this process, but not quite. Instead
 of adding the numeric values of positionally-identical characters, the
@@ -43,12 +45,14 @@ character.
 
 Example from Wikipedia that converts "EQNVZ" back to "HELLO":
 
+```
        E       Q       N       V       Z  ciphertext
     4 (E)  16 (Q)  13 (N)  21 (V)  25 (Z) ciphertext
 -  23 (X)  12 (M)   2 (C)  10 (K)  11 (L) key
 = -19       4      11      11      14     ciphertext – key
 =   7 (H)   4 (E)  11 (L)  11 (L)  14 (O) ciphertext – key (mod 26)
        H       E       L       L       O  → message
+```
 
 How these programs work:
 
