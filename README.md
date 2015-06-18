@@ -70,10 +70,12 @@ There are 5 programs in the set:
 You first create a key "page" using keygen. Due to the nature of OTP
 encryption (it's all position-based) the size of the key "page" must be
 greater than the size of the message to encrypt. Then the otp_enc client
-program is then used to send the key "page" and the message to the
+program is used to send the key "page" and the message to the
 otp_enc_d server for encryption. The otp_enc_d server sends back the
 encrypted message which is then output to stdout (redirect to a file to
-capture the content). The otp_dec client program can then be used to send
+capture the content). 
+
+The otp_dec client program can then be used to send
 the same key "page" and the encrypted message to the otp_dec_d server for
 decryption. The otp_dec_d server sends back the decrypted message which is
 then output to stdout (redirect to a file to capture the content).
@@ -82,7 +84,8 @@ then output to stdout (redirect to a file to capture the content).
 
 Download everyting and run 'make'. Command line help is offered by running
 a program without passing any command line arguments (they all require
-arguments, even the two servers).
+arguments, even the two servers). Be sure to run the two servers on
+different ports.
 
 ##Colophon:
 
@@ -105,6 +108,6 @@ curiosity, please keep the following in mind:
 - there is no guarantee it'll work, although it's not complex so it should
   work
 - please do not take credit for code you did not write, especially if you
-  are a student
+  are a student. NO CHEATING.
 
-
+Thanks!
